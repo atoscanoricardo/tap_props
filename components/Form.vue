@@ -1,7 +1,7 @@
 <script setup>
     const title = defineModel('title');
     const text = defineModel('text');
-    
+            
     
     const props = defineProps(['subtitle']);
     const subtitleTmp = ref('')

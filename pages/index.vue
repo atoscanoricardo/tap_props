@@ -8,13 +8,18 @@ const countModel = ref(0)
   <v-container>        
     <v-row>
       <v-col cols="12">
-        <Card :title :subtitle :text :countModel/>
+        <Card :title="title" :subtitle :text :countModel/>
       </v-col>
+      
       <v-col  cols="6">
         <Count v-model="countModel"/>
       </v-col>
       <v-col  cols="6">
-        <Form v-model:title="title" v-model:text="text" v-model:subtitle="subtitle"/>
+        <Form 
+          v-model:title="title" 
+          v-model:text="text" 
+          v-model:subtitle="subtitle"
+        />
       </v-col>      
     </v-row>
   </v-container>
