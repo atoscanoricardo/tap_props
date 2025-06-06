@@ -1,16 +1,16 @@
 <script setup>
-    const title = defineModel('title');
-    const text = defineModel('text');
+    const product_name = defineModel('product_name');
+    const price = defineModel('price');
             
     
-    const props = defineProps(['subtitle']);
-    const subtitleTmp = ref('')
+    const props = defineProps(['detail']);
+    const detailTmp = ref('')
     
 
-    const emit = defineEmits(['update:subtitle'])    
+    const emit = defineEmits(['update:detail'])    
 
     function updateFields (){
-        emit('update:subtitle', subtitleTmp.value)
+        emit('update:detail', detailTmp.value)
     }
 
     const fieldRules = ref([
@@ -22,24 +22,24 @@
 
 </script>
 <template>
-    <v-sheet class="mx-auto" width="300">
+    <v-sheet class="mx-auto">
       <v-form fast-fail @submit.prevent>
         <v-text-field
-            v-model="title"
+            v-model="product_name"
             :rules="fieldRules"
-            label="Título"
+            label="Nombre del producto"
         ></v-text-field>
         
         <v-text-field
-            v-model="subtitleTmp"
+            v-model="detailTmp"
             :rules="fieldRules"
-            label="Subtítulo"
+            label="Detalle"
         ></v-text-field>
 
         <v-text-field
-            v-model="text"
+            v-model="price"
             :rules="fieldRules"
-            label="Text"
+            label="Precio"
         ></v-text-field>
 
         <v-btn @click="updateFields">Actualizar datos</v-btn>

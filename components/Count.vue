@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <div>Incrementar producto: {{ count }}</div>
-  <v-btn @click="update">Increment</v-btn>
-  <v-btn @click="deupdate">Decrement</v-btn>
+  <div>Total productos en el carrito: {{ count }}</div>
+  <v-btn @click="update">+</v-btn>
+  <v-btn @click="deupdate">-</v-btn>
 </template>

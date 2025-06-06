@@ -1,21 +1,22 @@
 <script setup>
-  const props = defineProps(['subtitle', 'title', 'text', 'countModel'])
+  const props = defineProps(['product_name', 'detail', 'price', 'countModel'])
 </script>
 <template>
     <v-card
       class="mx-auto"
       prepend-icon="$vuetify"
-      :subtitle="`${subtitle} ${countModel}`"
+      :subtitle="`Descripción: ${detail}`"
       width="400"
     >
       <template v-slot:title>
         <span class="font-weight-black">
-          {{ title }}
+          {{ product_name }}
+          : ${{ price }}.00
         </span>
       </template>
   
       <v-card-text class="bg-surface-light pt-4">
-        {{ text }}
+        Cantidad de artículos {{ countModel }} 
       </v-card-text>
     </v-card>
   </template>
