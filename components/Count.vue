@@ -5,7 +5,7 @@
         count.value++
     }
 
-    function deupdate() {
+    function downgrade() {
         count.value--
     }
 
@@ -14,5 +14,5 @@
 <template>
   <div>Total productos en el carrito: {{ count }}</div>
   <v-btn @click="update">+</v-btn>
-  <v-btn @click="deupdate">-</v-btn>
+  <v-btn @click="downgrade">-</v-btn>
 </template>

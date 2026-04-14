@@ -72,7 +72,7 @@ const updateProductFromForm = () => {
           v-model:product_name="formProductName"
           v-model:price="formPrice"
           v-model:detail="formDetail"
-          @update:detail="updateProductFromForm"
+          <!-- @update:detail="updateProductFromForm" -->
           @update:product_name="updateProductFromForm"
           @update:price="updateProductFromForm"
         />

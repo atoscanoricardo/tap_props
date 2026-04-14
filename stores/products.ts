@@ -16,9 +16,10 @@ export const useStoreProduct = defineStore('product', {
     async fetchProducts() {
       try {
         const response = await $fetch('/api/products')
+        console.log(response)
         this.products = response      
         this.setCurrentProduct(this.products[0]);
-        
+        console.log(this.products);
       } catch (error) {
         console.error('Error fetching cultura:', error)
       }
